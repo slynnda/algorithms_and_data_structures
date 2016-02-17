@@ -9,7 +9,7 @@ import static org.junit.Assert.assertFalse;
 public class TestNode {
 
   private String data = "Hello";
-  private Node underTest;
+  private Node<String> underTest;
 
   @Before
   public void initializeTestSuite() {
