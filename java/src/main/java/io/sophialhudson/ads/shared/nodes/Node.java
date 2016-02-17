@@ -1,7 +1,5 @@
 package io.sophialhudson.ads.shared.nodes;
 
-import java.util.Objects;
-
 /**
  * This class defines a generic node with a data field, and methods
  * for getting and setting.
