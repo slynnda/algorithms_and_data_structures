@@ -1,4 +1,4 @@
-package io.sophialhudson.ads.lists;
+package io.sophialhudson.ads.shared.nodes;
 
 import java.util.Objects;
 
