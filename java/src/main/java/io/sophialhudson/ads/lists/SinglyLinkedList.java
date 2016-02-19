@@ -26,6 +26,12 @@ public class SinglyLinkedList<ItemType> {
     this.size = 0;
   }
 
+  /**
+   * Constructor with single node. This constructor allows the caller to instantiate
+   * a linked list with an initial node. 
+   *
+   * @return SinglyLinkedList
+   */
   public SinglyLinkedList(SinglyLinkedNode<ItemType> node) {
     this.head = node;
     this.tail = node;
@@ -112,7 +118,7 @@ public class SinglyLinkedList<ItemType> {
    *
    * @param node The node to insert.
    * @param position The position before which to insert the node.
-   * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds."
+   * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
   public void insertBefore(SinglyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException {
 
@@ -123,21 +129,11 @@ public class SinglyLinkedList<ItemType> {
    * list. If the provided index is not in the range of valid indexes, an exception
    * is thrown.
    *
+   * @param node The node to insert.
+   * @param position The position after which to insert the node.
+   * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
   public void insertAfter(SinglyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException {
-
-  }
-
-  /**
-   * Insert a node at the given position, provided that position exists in the
-   * list. If the provided index is not in the range of valid indexes, an 
-   * exception is thrown.
-   *
-   * @param node The node to insert.
-   * @param position The position at which to insert the node.
-   * @throws IndexOutOfBoundException The provided position was not within the appropriate bounds.
-   */
-  public void insertAt(SinglyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException {
 
   }
 
