@@ -26,29 +26,105 @@ public class SinglyLinkedList<ItemType> {
     this.size = 0;
   }
 
+  public SinglyLinkedList(SinglyLinkedNode<ItemType> node) {
+    this.head = node;
+    this.tail = node;
+    this.size = 1;
+  }
+
+  /**
+   * Get a reference to the head of the list.
+   *
+   * @return The head of the list.
+   */
+  public SinglyLinkedNode<ItemType> getHead() {
+    return this.head;
+  }
+
+  /**
+   * Get a reference to the tail of the list.
+   *
+   * @return The tail of the list.
+   */
+  public SinglyLinkedNode<ItemType> getTail() {
+    return this.tail;
+  }
+
+  /**
+   * Get the size of the list.
+   *
+   * @return The number of elements in the list.
+   */
+  public int getSize() {
+    return this.size;
+  }
+
   /**
    * Prepend a node to the beginning of the linked list, moving the
    * head over and attaching the desired node as the new list head.
+   *
+   * TODO: Throw exception if the argument is null.
    * 
    * @param node The node to prepend to the list.
    */
   public void prepend(SinglyLinkedNode<ItemType> node) {
-     
+    if (this.isEmpty()) {
+      this.head = node;
+      this.tail = node;
+    } else {
+      node.setNext(this.head);
+      this.head.setNext(node);
+      this.head = node;
+    }
+    this.size = this.size + 1;
   }
 
   /**
    * Append a node to the end of the linked list.
    *
+   * TODO: Throw exception if the argument is null.
+   *
    * @param node The node to append to the list.
    */
   public void append(SinglyLinkedNode<ItemType> node) {
-
+    if (this.isEmpty()) {
+      this.head = node;
+      this.tail = node;
+    } else {
+      node.setNext(null);
+      this.tail.setNext(node);
+      this.tail = node;
+    }
+    this.size = this.size + 1;
   }
 
   /**
    * Reverse the entire list (not the most optimal of methods).
    */
   public void reverse() {
+
+  }
+
+  /**
+   * Insert a node before the given position, provided that position exists in the
+   * list. If the provided index is not in the range of valid indexes, an exception
+   * is thrown.
+   *
+   * @param node The node to insert.
+   * @param position The position before which to insert the node.
+   * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds."
+   */
+  public void insertBefore(SinglyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException {
+
+  }
+
+  /**
+   * Insert a node after the given position, provided that position exists in the
+   * list. If the provided index is not in the range of valid indexes, an exception
+   * is thrown.
+   *
+   */
+  public void insertAfter(SinglyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException {
 
   }
 
@@ -72,7 +148,7 @@ public class SinglyLinkedList<ItemType> {
    * @return Whether or not the list is empty.
    */
   public boolean isEmpty() { 
-    return false;
+    return this.size == 0;
   }
 
   /**
