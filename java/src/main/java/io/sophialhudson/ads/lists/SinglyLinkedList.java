@@ -176,9 +176,23 @@ public class SinglyLinkedList<ItemType> {
    *
    * @param position The position in the list of the node to return.
    * @return The node in the list at the provided position.
+   * @throws IllegalStateException An attempt was made to retrieve a node from an empty list.
    * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
-  public SinglyLinkedNode<String> getNodeAtPosition(int position) throws IndexOutOfBoundsException {
+  public SinglyLinkedNode<String> getNodeAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException {
+    //if (this.isEmpty()) {
+    //  throw new IllegalStateException(String.format("Cannot retrieve node at position %i from an empty list", position));
+    //} else if (0 <= position && position < this.size) {
+    //  int currentNode = this.head;
+    //  int cursorPosition = 1;
+    //  while (cursorPosition <= position) {
+    //    currentNode = currentNode.getNext();
+    //    cursorPosition = cursorPosition + 1;
+    //  }
+    //  return currentNode;
+    //} else {
+    //  throw new IndexOutOfBoundsException(String.format("Position %i is out of bounds", position));
+    //}
     return null;
   }
 
@@ -189,9 +203,23 @@ public class SinglyLinkedList<ItemType> {
    * 
    * @param position The position in the list of the value to return.
    * @return The value in the list at the provided position.
+   * @throws IllegalStateException An attempt was made to retrieve a node from an empty list.
    * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
-  public ItemType getValueAtPosition(int position) throws IndexOutOfBoundsException {
+  public ItemType getValueAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException {
+    //if (this.isEmpty()) {
+    //  throw new IllegalStateException(String.format("Cannot retrieve node at position %i from an empty list", position));
+    //} else if (0 <= position && position < this.size) {
+    //  SinglyLinkedNode<ItemType> currentNode = this.head;
+    //  int cursorPosition = 1;
+    //  while (cursorPosition <= position) {
+    //    currentNode = currentNode.getNext();
+    //    cursorPosition = cursorPosition + 1;
+    //  }
+    //  return currentNode;
+    //} else {
+    //  throw new IndexOutOfBoundsException(String.format("Position %i is out of bounds", position));
+    //}
     return null;
   }
 
