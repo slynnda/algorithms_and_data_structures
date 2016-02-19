@@ -162,8 +162,8 @@ public class SinglyLinkedList<ItemType> {
    * Gives whether or not a particular value is contained in any of the
    * nodes in the list.
    *
-   * @param value The value ot check the list for.
-   * @return Whether or not any of the nodes in the list contain the provided value
+   * @param value The value to check the list for.
+   * @return Whether or not any of the nodes in the list contain the provided value.
    */
   public boolean containsValue(ItemType value) {
     return false;
@@ -179,7 +179,7 @@ public class SinglyLinkedList<ItemType> {
    * @throws IllegalStateException An attempt was made to retrieve a node from an empty list.
    * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
-  public SinglyLinkedNode<String> getNodeAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException {
+  public SinglyLinkedNode<ItemType> getNodeAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException {
     //if (this.isEmpty()) {
     //  throw new IllegalStateException(String.format("Cannot retrieve node at position %i from an empty list", position));
     //} else if (0 <= position && position < this.size) {
@@ -203,7 +203,7 @@ public class SinglyLinkedList<ItemType> {
    * 
    * @param position The position in the list of the value to return.
    * @return The value in the list at the provided position.
-   * @throws IllegalStateException An attempt was made to retrieve a node from an empty list.
+   * @throws IllegalStateException An attempt was made to retrieve a value from an empty list.
    * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
   public ItemType getValueAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException {
