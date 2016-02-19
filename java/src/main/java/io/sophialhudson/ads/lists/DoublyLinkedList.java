@@ -73,8 +73,8 @@ public class DoublyLinkedList<ItemType> {
    *
    * @param node The node to prepend to the list.
    */
-  public void prepend(DoublyLinkedNode<ItemType> node) {
-
+  public void prepend(DoublyLinkedNode<ItemType> node) throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -84,15 +84,15 @@ public class DoublyLinkedList<ItemType> {
    *
    * @param node The node to append to the list.
    */
-  public void append(DoublyLinkedNode<ItemType> node) {
-
+  public void append(DoublyLinkedNode<ItemType> node) throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
    * Reverse the entire list (not the most optimal of methods).
    */
-  public void reverse() {
-
+  public void reverse() throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -104,8 +104,8 @@ public class DoublyLinkedList<ItemType> {
    * @param position The position before which to insert the node.
    * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
-  public void insertBefore(DoublyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException {
-
+  public void insertBefore(DoublyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException, UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -118,8 +118,8 @@ public class DoublyLinkedList<ItemType> {
    * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    *
    */
-  public void insertAfter(DoublyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException {
-
+  public void insertAfter(DoublyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException, UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -128,8 +128,8 @@ public class DoublyLinkedList<ItemType> {
    *
    * @return Whether or not the list is empty.
    */
-  public boolean isEmpty() {
-    return false;
+  public boolean isEmpty() throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -138,8 +138,8 @@ public class DoublyLinkedList<ItemType> {
    * @param node The node to check the list for.
    * @return Whether or not the provided node is contained in the list.
    */
-  public boolean containsNode(DoublyLinkedNode<ItemType> node) {
-    return false;
+  public boolean containsNode(DoublyLinkedNode<ItemType> node) throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -149,8 +149,8 @@ public class DoublyLinkedList<ItemType> {
    * @param value The value to check the list for.
    * @return Whether or not any of the nodes in the list contain the provided value.
    */
-  public boolean containsValue(ItemType value) {
-    return false;
+  public boolean containsValue(ItemType value) throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -163,8 +163,8 @@ public class DoublyLinkedList<ItemType> {
    * @throws IllegalStateException An attempt was made to retrieve a node from an empty list.
    * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
-  public DoublyLinkedNode<ItemType> getNodeAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException {
-    return null;
+  public DoublyLinkedNode<ItemType> getNodeAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException, UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -177,8 +177,8 @@ public class DoublyLinkedList<ItemType> {
    * @throws IllegalStateException An attempt was made to retrieve a value from an empty list.
    * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
    */
-  public ItemType getValueAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException {
-    return null;
+  public ItemType getValueAtPosition(int position) throws IllegalStateException, IndexOutOfBoundsException, UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -188,8 +188,8 @@ public class DoublyLinkedList<ItemType> {
    * @param node The node to scan the list for.
    * @return The position of the node in the list.
    */
-  public int indexOfNode(DoublyLinkedNode<ItemType> node) {
-    return -1;
+  public int indexOfNode(DoublyLinkedNode<ItemType> node) throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
   /**
@@ -199,8 +199,8 @@ public class DoublyLinkedList<ItemType> {
    * @param value The value to scan the list for.
    * @return The position of the first occurrence of the value in the list.
    */
-  public int indexOfValue(ItemType value) {
-    return -1;
+  public int indexOfValue(ItemType value) throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
   }
 
 }
