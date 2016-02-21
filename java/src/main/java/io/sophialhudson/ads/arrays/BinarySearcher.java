@@ -39,7 +39,7 @@ public class BinarySearcher {
    * @throws NullPointerException Attempted to search a null array.
    */
   public static int shortArrayIndexOf(short x, short[] arr) throws NullPointerException, UnsupportedOperationException {
-    throw new UnsupportedOperationException("This method has yet to be implemented");
+    throw new UnsupportedOperationException("This method has yet to be implemented.");
   }
 
   /**
@@ -58,7 +58,7 @@ public class BinarySearcher {
       throw new NullPointerException("Cannot search for elements in a null array.");
     } else {
       int len = arr.length;
-      if (arr.length == 0) {
+      if (len == 0) {
         return -1;
       } else if (len == 1 && arr[0] == x) {
         return 0;
