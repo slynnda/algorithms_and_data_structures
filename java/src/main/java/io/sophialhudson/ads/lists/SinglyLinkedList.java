@@ -112,32 +112,6 @@ public class SinglyLinkedList<ItemType> {
   }
 
   /**
-   * Insert a node before the given position, provided that position exists in the
-   * list. If the provided index is not in the range of valid indexes, an exception
-   * is thrown.
-   *
-   * @param node The node to insert.
-   * @param position The position before which to insert the node.
-   * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
-   */
-  public void insertBefore(SinglyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException, UnsupportedOperationException {
-    throw new UnsupportedOperationException("This method is not yet supported.");
-  }
-
-  /**
-   * Insert a node after the given position, provided that position exists in the
-   * list. If the provided index is not in the range of valid indexes, an exception
-   * is thrown.
-   *
-   * @param node The node to insert.
-   * @param position The position after which to insert the node.
-   * @throws IndexOutOfBoundsException The provided position was not within the appropriate bounds.
-   */
-  public void insertAfter(SinglyLinkedNode<ItemType> node, int position) throws IndexOutOfBoundsException, UnsupportedOperationException {
-    throw new UnsupportedOperationException("This method is not yet supported.");
-  }
-
-  /**
    * Gives whether or not the list is empty. Returns true if it is empty and
    * false otherwise.
    *
@@ -166,6 +140,20 @@ public class SinglyLinkedList<ItemType> {
    * @return Whether or not any of the nodes in the list contain the provided value.
    */
   public boolean containsValue(ItemType value) throws UnsupportedOperationException {
+    throw new UnsupportedOperationException("This method is not yet supported.");
+  }
+
+  /**
+   * Inserts the given node at the given position in the list. This insert method follows the convention
+   * that inserting at a given position retains the position of all the nodes before that position, and that
+   * the nodes at and after that position are shifted over to higher indexes.
+   *
+   * @param node The node to insert.
+   * @param position The position at which to insert the node.
+   * @throws IllegalStateException An attempt to insert a node into an empty linked list at an invalid position.
+   * @throws IndexOutOfBoundsException An attempt was made to insert a node at a position that is not within the appropriate bounds.
+   */
+  public void insertAt(SinglyLinkedNode<ItemType> node, int position) throws IllegalStateException, IndexOutOfBoundsException, UnsupportedOperationException {
     throw new UnsupportedOperationException("This method is not yet supported.");
   }
   

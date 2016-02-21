@@ -87,11 +87,7 @@ public class TestSinglyLinkedList {
   }
 
   @Ignore
-  public void testInsertBefore() {
-  }
-
-  @Ignore
-  public void testInsertAfter() {
+  public void testInsertAt() {
 
   }
 
