@@ -14,7 +14,7 @@ public class TestBinarySearcher {
 
   @Ignore
   public void testShortArrayIndexOf() {
-
+     
   }
 
   @Test
@@ -56,6 +56,7 @@ public class TestBinarySearcher {
     assertEquals("Failed to return 0 when value is found", 0, BinarySearcher.intArrayIndexOf(3, threeValueDescendingArray));
     assertEquals("Failed to return 1 when value is found", 1, BinarySearcher.intArrayIndexOf(2, threeValueDescendingArray));
     assertEquals("Failed to return 2 when value is found", 2, BinarySearcher.intArrayIndexOf(1, threeValueDescendingArray));
+
   }
 
 
