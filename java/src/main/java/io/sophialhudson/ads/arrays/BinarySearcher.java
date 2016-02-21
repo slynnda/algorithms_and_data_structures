@@ -53,8 +53,66 @@ public class BinarySearcher {
    * @return The index of the first occurrence of the provided int.
    * @throws NullPointerException Attempted to search a null array.
    */
-  public static int intArrayIndexOf(int x, int[] arr) throws NullPointerException, UnsupportedOperationException {
-    throw new UnsupportedOperationException("This method is yet to be implemented.");
+  public static int intArrayIndexOf(int x, int[] arr) throws NullPointerException {
+    if (arr == null) {
+      throw new NullPointerException("Cannot search for elements in a null array.");
+    } else {
+      int len = arr.length;
+      if (arr.length == 0) {
+        return -1;
+      } else if (len == 1 && arr[0] == x) {
+        return 0;
+      } else if (len == 1 && arr[0] != x) {
+        return -1;
+      } else if (len == 2) {
+        if (arr[0] == x) {
+          return 0;
+        } else if (arr[1] == x) {
+          return 1;
+        } else {
+          return -1;
+        }
+      } else {
+        int leftIdx = 0;
+        int rightIdx = len - 1;
+        int leftVal = arr[leftIdx];
+        int rightVal = arr[rightIdx];
+        int diff = rightVal - leftVal;
+        if (diff > 0) {
+          while (leftIdx <= rightIdx) {
+            int midIdx = (leftIdx + rightIdx) / 2;
+            int midVal = arr[midIdx];
+            if (midVal == x) {
+              return midIdx;
+            } else if (midVal < x) {
+              leftIdx = midIdx + 1;
+            } else {
+              rightIdx = rightIdx - 1;
+            }
+          }
+          return -1;
+        } else if (diff < 0) {
+          while (leftIdx <= rightIdx) {
+            int midIdx = (leftIdx + rightIdx) / 2;
+            int midVal = arr[midIdx];
+            if (midVal == x) {
+              return midIdx;
+            } else if (midVal < x) {
+              rightIdx = midIdx - 1;
+            } else {
+              leftIdx = midIdx + 1;
+            }
+          }
+          return -1;
+        } else {
+          if (leftVal == x) {
+            return 0;
+          } else {
+            return -1;
+          }
+        }
+      }
+    }
   }
 
   /**
