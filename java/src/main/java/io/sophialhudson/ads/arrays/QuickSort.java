@@ -88,15 +88,16 @@ public class QuickSort {
   }
 
   /**
-   * Do an in-place sort of the provided array. This method
-   * will sort the entire array and throw an exception if the
-   * array is null.
+   * Do an in-place sort of the provided array.
    * 
    * @param arr The array to sort.
    * @throws NullPointerException Attempted to sort a null array.
    */
-  public static void sort(int[] arr) throws NullPointerException, UnsupportedOperationException {
-    throw new UnsupportedOperationException("This method has yet to be implemented.");
+  public static void sort(int[] arr) throws NullPointerException {
+    if (arr == null) {
+      throw new NullPointerException("Cannot sort a null array.");
+    }
+    sort(arr, 0, arr.length - 1);
   }
 
   /**
@@ -109,8 +110,16 @@ public class QuickSort {
    * @param high Upper bound of the segment to sort.
    * @throws NullPointerException Attempted to sort a null array.
    */
-  public static void sort(int[] arr, int low, int high) throws NullPointerException, UnsupportedOperationException {
-    throw new UnsupportedOperationException("This method has yet to be implemented.");
+  public static void sort(int[] arr, int low, int high) {
+    if (arr == null) {
+      throw new NullPointerException("Cannot sort a null array.");
+    }
+      if (arr.length == 0 || low >= high) {
+      return;
+    }
+    int p = partition(arr, low, high);
+    sort(arr, low, p);
+    sort(arr, p + 1, high);
   }
 
   /**
@@ -121,8 +130,22 @@ public class QuickSort {
    * @param low Lower bound of the segment to partition.
    * @param high Upper bound of the segment to sort.
    */
-  private  static int partition(int[] arr, int low, int high) throws UnsupportedOperationException {
-    throw new UnsupportedOperationException("This method has yet to be implemented.");
+  private static int partition(int[] arr, int low, int high) {
+    int pivot = arr[low];
+    int i = low - 1;
+    int j = high + 1;
+    while (i < j) {
+      do { 
+        i = i + 1;
+      } while (arr[i] < pivot);
+      do {
+        j = j - 1;
+      } while (arr[j] > pivot);
+      int temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    } 
+    return j;
   }
 
   /**
